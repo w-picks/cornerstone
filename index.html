@@ -22,7 +22,10 @@
       </header>
 
       <section id="main-section">
-        <h2>클라우드 솔루션<br class="pc" /><span class="point-txt-color">코너스톤</span>에서<br />쉽고 간편하게</h2>
+        <h2>
+          클라우드 솔루션<br /><span class="point-txt-color">코너스톤</span>에서<br class="pc" />
+          쉽고 간편하게
+        </h2>
         <article>
           <img src="images/main_1.png" />
           <ul class="main-category">
@@ -71,6 +74,7 @@
             </article>
           </div>
           <div class="swiper-slide slide-2">section2</div>
+          <div class="swiper-slide slide-3">section3</div>
         </div>
       </section>
 
@@ -163,12 +167,12 @@
       <section id="sub-banner">
         <h2>
           클라우드 솔루션<br />
-          코너스톤에서<br />
+          코너스톤에서<br class="pc" />
           쉽고 간편하게
         </h2>
       </section>
       <section id="why-use-cornerstone">
-        <h2><span class="point-txt-color">코너스톤</span><br />으로 전향해야 할<br />보다 많은 이유.</h2>
+        <h2><span class="point-txt-color">코너스톤</span><br class="pc" />으로 전향해야 할<br />보다 많은 이유.</h2>
         <article class="img-container">
           <div class="img-item-1">
             <i>채용.온보딩</i>
@@ -271,14 +275,34 @@
       </footer>
     </div>
     <script>
-      const windowWt = window.innerWidth;
-      if (windowWt > 768) {
-        const swiper = new Swiper("#slide-section", {
-          direction: "vertical",
-          mousewheel: true,
-          effect: "fade",
-        });
-      }
+      let swiper = undefined;
+      const resizeFunc = () => {
+        const windowWt = window.innerWidth;
+        if (windowWt > 768 && swiper == undefined) {
+          swiper = new Swiper("#slide-section", {
+            direction: "vertical",
+            mousewheel: {
+              releaseOnEdges: true,
+            },
+            effect: "fade",
+          });
+          swiper.on("reachEnd", () => {
+            console.log("last");
+          });
+        } else if (windowWt <= 768 && swiper != undefined) {
+          console.log(swiper);
+          swiper.destroy();
+          swiper = undefined;
+        }
+      };
+      resizeFunc();
+
+      window.addEventListener("resize", resizeFunc);
+
+      window.addEventListener("scroll", () => {
+        const scr = window.scrollY;
+        const slideHt = document.querySelector("#slide-section").offsetHeight;
+      });
     </script>
     <script src="js/main.js"></script>
   </body>

@@ -119,6 +119,7 @@ header .logo img {
 }
 #main-section .main-category {
   width: 90.33%;
+  max-width: 888px;
   margin: auto;
   padding: 13px 15px;
   box-sizing: border-box;
@@ -155,18 +156,18 @@ header .logo img {
 #slide-section {
   overflow: hidden;
   padding-top: 0;
+  max-height: 500px;
 }
 #slide-section .swiper-slide {
   background: rgba(213, 244, 244, 0.3);
   padding: 57px 4.83% 40px 4.83%;
   /* 15.21 */
-  max-height: 500px;
   box-sizing: border-box;
 }
-#slide-section .swiper-wrapper {
-  display: block;
-}
 #slide-section .swiper-slide article {
+  width: 100%;
+  max-width: 1231px;
+  margin: auto;
 }
 #slide-section .swiper-slide article h2 {
   font-size: 25px;
@@ -214,10 +215,14 @@ header .logo img {
 #slide-section .swiper-slide.slide-2 {
   background: red;
 }
+#slide-section .swiper-slide.slide-3 {
+  background: blue;
+}
 
 /* 학습 */
 #learning-section .img-container {
   margin-top: 85px;
+  max-width: 843px;
 }
 
 /* 성과 커리어 */
@@ -432,4 +437,316 @@ footer .sns li {
   border-radius: 50%;
   background: #636975;
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  #slide-section .swiper-slide article .user-value {
+    width: 386px;
+    height: 368px;
+    margin-top: 42px;
+  }
+  #slide-section .swiper-slide article .user-value li {
+    width: 170px;
+    height: 170px;
+    background-position: top 48px right 42px;
+  }
+}
+@media (min-width: 998px) {
+  br.pc {
+    display: none;
+  }
+  .description h3.section-tit {
+    font-size: 23px;
+    background-size: auto 31px;
+    height: 31px;
+    line-height: 31px;
+    padding-left: 40px;
+  }
+  .description h2 {
+    font-size: 53px;
+    margin-top: 37px;
+    margin-bottom: 25px;
+  }
+  .description p {
+    font-size: 23px;
+    margin-bottom: 110px;
+  }
+  .description .more {
+    font-size: 20px;
+    padding: 20px 60px 20px 32px;
+    background-size: 17px;
+    background-position: center right 24px;
+  }
+  .img-container > div {
+    border-radius: 56px;
+  }
+
+  #main-section {
+    padding-top: 237px;
+    margin-bottom: 0;
+    z-index: 2;
+  }
+  #main-section h2 {
+    font-size: 57px;
+  }
+  #main-section article {
+    display: flex;
+    flex-direction: column;
+    margin-top: -49px;
+  }
+  #main-section article > img {
+    order: 2;
+    width: 90%;
+    max-width: 1223px;
+    margin-top: 141px;
+    transform: translateY(134px);
+  }
+
+  #main-section .main-category {
+    order: 1;
+    transform: translateY(134px);
+    flex-wrap: nowrap;
+    border-radius: 100px;
+    height: 176px;
+    padding: 0;
+  }
+  #main-section .main-category li {
+    flex: 1;
+    border: none !important;
+    position: relative;
+  }
+  #main-section .main-category li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 89px;
+    background: #8cdddf;
+  }
+  #main-section .main-category li:last-of-type::after {
+    display: none;
+  }
+  #main-section .main-category li a {
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  #slide-section {
+    max-height: 767px;
+  }
+  #slide-section .swiper-slide {
+    padding-top: 219px;
+  }
+  #slide-section .swiper-slide article {
+    display: flex;
+    justify-content: space-between;
+  }
+  #slide-section .swiper-slide article h2 {
+    font-size: 45px;
+  }
+  #slide-section .swiper-slide article .user-value {
+    width: 496px;
+    height: 478px;
+    margin: auto;
+  }
+  #slide-section .swiper-slide article .user-value li {
+    width: 220px;
+    height: 220px;
+    background-position: top 48px right 42px;
+  }
+  section#learning-section {
+    padding: 133px calc(50% - 717px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #learning-section .img-container {
+    margin-top: 0;
+  }
+  section#career-section {
+    padding: 154px calc(50% - 717px);
+    padding-bottom: 196px;
+  }
+  #career-section::after {
+    height: 1225px;
+  }
+  #career-section .img-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 26px;
+    margin-top: 62px;
+  }
+  #career-section .img-container .img-item-1 {
+    width: 850px;
+    margin-right: 34px;
+    height: 832px;
+    flex-shrink: 0;
+  }
+  #career-section .img-container .img-item-1 p {
+    padding: 79px 0 146px 62px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: none;
+  }
+  #career-section .img-container .img-item-2 {
+    flex-grow: 1;
+    height: 832px;
+  }
+  #career-section .img-container .img-item-2 p {
+    padding: 79px 0 114px 65px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: none;
+  }
+  #career-section .img-container .img-item-2 img {
+    width: 416px;
+  }
+  section#recruit-section {
+    padding: 143px calc(50% - 717px);
+    padding-bottom: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  #recruit-section .img-container {
+    max-width: 1332px;
+    margin-top: 93px;
+    position: relative;
+    z-index: 2;
+    top: 30px;
+  }
+  #recruit-section .bg-mockup {
+    display: block;
+    position: absolute;
+    left: 730px;
+    top: 0;
+    width: 775px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #recruit-section .bg-mockup img {
+    width: 354px;
+    filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+  }
+  #recruit-section .bg-mockup img.mockup-1 {
+    transform: translateY(-90px);
+  }
+  #recruit-section .bg-mockup img.mockup-2 {
+    transform: translateY(252px);
+  }
+  section#management-section {
+    padding: 164px calc(50% - 717px);
+  }
+  #management-section h2 {
+    margin-top: 42px;
+    margin-bottom: 62px;
+  }
+  #management-section .img-container {
+    margin-top: 123px;
+    display: grid;
+    grid-template-columns: 551px 850px;
+    justify-content: space-between;
+  }
+  #management-section .img-container .img-item-1 {
+    order: 1;
+    grid-row: 1 / span 1;
+    height: 587px;
+    font-size: 26px;
+  }
+  #management-section .img-container .img-item-1 p {
+    padding: 76px 0 93px 65px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: none;
+  }
+  #management-section .img-container .img-item-1 img {
+    width: 416px;
+  }
+  #management-section .img-container .img-item-2 {
+    order: 3;
+    height: 214px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 31px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+  }
+  #management-section .img-container .img-item-2 p {
+    max-width: none;
+    padding-left: 44px;
+  }
+  #management-section .img-container .img-item-3 {
+    order: 2;
+    grid-row: 1 / span 2;
+    height: 832px;
+    font-size: 26px;
+  }
+  #management-section .img-container .img-item-3 p {
+    padding: 79px 0 146px 62px;
+    max-width: none;
+  }
+  #sub-banner {
+    padding: 0;
+    position: relative;
+    height: 497px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #sub-banner::before,
+  #sub-banner::after {
+    content: "";
+    display: block;
+    width: 447px;
+    height: 447px;
+    background: url(../images/sub-banner-bg-graph.svg) no-repeat 0 0 / contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -160px;
+  }
+  #sub-banner::after {
+    left: auto;
+    right: -160px;
+  }
+  section#why-use-cornerstone {
+    padding: 90px calc(50% - 717px);
+  }
+  #why-use-cornerstone h2 {
+    font-size: 60px;
+  }
+  #why-use-cornerstone .img-container {
+    margin-top: 77px;
+    display: grid;
+    height: 2177px;
+    grid-template-columns: 693px 693px;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  #why-use-cornerstone .img-container > div {
+    height: auto;
+    padding: 66px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  #why-use-cornerstone .img-container > div i {
+    font-size: 20px;
+    max-width: none;
+  }
+  #why-use-cornerstone .img-container > div p {
+    font-size: 32px;
+    max-width: none;
+    margin-top: 24px;
+    margin-bottom: 109px;
+  }
+  #why-use-cornerstone .img-container > div img {
+    width: 538px;
+  }
+  #why-use-cornerstone .img-item-3 {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+  }
+  #why-use-cornerstone .img-item-4 {
+  }
 }
