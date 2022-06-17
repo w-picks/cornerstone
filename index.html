@@ -16,10 +16,51 @@
       <header>
         <div>
           <h1 class="logo">
-            <img src="images/cornerstone-logo.png" title="cornerstone" alt="코너스톤 로고" />
+            <a href="#slide-section">
+              <img src="images/cornerstone-logo.png" title="cornerstone" alt="코너스톤 로고" />
+            </a>
           </h1>
         </div>
       </header>
+      <button id="inquiry-btn">도입 문의하기<img src="images/icons/inquiry-button-icon.svg" /></button>
+      <div id="inquiry">
+        <button class="close"><img src="images/icons/inquiry-button-close.svg" /></button>
+        <h3>도입문의</h3>
+        <p>궁금하신 사항을 남겨주시면, 빠르게 연락드리겠습니다.</p>
+        <form class="inquiry-form">
+          <article>
+            <div class="name"><span>성함</span><input type="text" /></div>
+            <div class="company"><span>회사명</span><input type="text" /></div>
+            <div class="part"><span>부서명</span><input type="text" /></div>
+            <div class="position"><span>직책</span><input type="text" /></div>
+            <div class="phone">
+              <span>휴대폰</span>
+              <div class="phone-input"><input type="number" />&nbsp;-&nbsp;<input type="number" />&nbsp;-&nbsp;<input type="number" /></div>
+            </div>
+            <div class="email">
+              <span>이메일</span>
+              <div class="email-input">
+                <input type="text" />
+                &nbsp;@&nbsp;
+                <select>
+                  <option>선택하세요</option>
+                  <option>직접입력</option>
+                  <option>naver.com</option>
+                  <option>daum.net</option>
+                  <option>gmail.com</option>
+                  <option>hotmail.com</option>
+                  <option>nate.com</option>
+                  <option>korea.com</option>
+                </select>
+              </div>
+            </div>
+            <div class="solution"><span>문의솔루션</span><input type="text" /></div>
+            <div class="etc"><span>문의사항</span><textarea></textarea></div>
+          </article>
+          <button type="submit">문의보내기<img src="images/icons/inquiry-button-icon.svg" /></button>
+        </form>
+      </div>
+      <div class="dim"></div>
 
       <section id="main-section">
         <h2>
@@ -75,129 +116,153 @@
           </div>
           <div class="swiper-slide slide-2">section2</div>
           <div class="swiper-slide slide-3">section3</div>
+          <div class="swiper-slide slide-4">section4</div>
+          <div class="swiper-slide slide-5">section5</div>
+          <div class="swiper-slide slide-5">section5</div>
         </div>
       </section>
 
       <section id="learning-section">
         <aritcle class="description">
-          <h3 class="section-tit">학습</h3>
-          <h2>학습현황을 하나의<br />대시보드에서</h2>
-          <p>
+          <h3 class="section-tit scroll-trans">교육</h3>
+          <h2 class="scroll-trans">
+            한 눈에 보는<br />
+            나의 학습 현황과<br />
+            맞춤형 추천
+          </h2>
+          <p class="scroll-trans">
             코너스톤은 지속적인 감독 및 모니터링을 통해<br />
             고객의 위험을 관리하기 위해 포괄적인 보안,<br />
             개인 정보 보호 및 규정 준수
           </p>
-          <button class="more">더알아보기</button>
+          <button class="more scroll-trans"><a href="/">더알아보기</a></button>
         </aritcle>
-        <article class="img-container">
-          <img src="images/main_1.png" />
+        <article class="img-container scroll-trans">
+          <img src="images/product-screen/learning-main.png" />
+          <span class="tool tool-1 scroll-trans">진행중인 학습</span>
+          <span class="tool tool-2 scroll-trans">학습 이력 기반 추천 과정</span>
+          <span class="tool tool-3 scroll-trans">직무 기반 추천 과정</span>
         </article>
       </section>
 
       <section id="career-section">
         <aritcle class="description">
-          <h3 class="section-tit">성과&#183;커리어</h3>
-          <h2>학습현황을 하나의<br />대시보드에서</h2>
-          <p>
-            코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            고객의 위험을 관리하기 위해 포괄적인 보안,<br />
-            개인 정보 보호 및 규정 준수
-          </p>
-          <button class="more">더알아보기</button>
+          <h3 class="section-tit scroll-trans">성과&#183;커리어</h3>
+          <h2 class="scroll-trans">
+            나와 조직의 목표를<br />
+            한 눈에 보기
+          </h2>
+          <button class="more scroll-trans"><a href="/">더알아보기</a></button>
         </aritcle>
         <article class="img-container">
-          <div class="img-item-1">
+          <div class="img-item-1 scroll-trans">
             <p>
               코너스톤은 지속적인 감독 및 모니터링을 통해 고객의 위험을<br />
               관리하기 위해 포괄적인 보안, 개인 정보 보호 및 규정 준수
             </p>
-            <img src="images/career_1.png" />
+            <img src="images/product-screen/career-main-1.png" />
           </div>
-          <div class="img-item-2">
+          <div class="img-item-2 scroll-trans scroll-trans-delay-300">
             <p>
               코너스톤은 지속적인 감독 및<br />
               모니터링을 통해 고객의 위험을 관리
             </p>
-            <img src="images/career_2.png" />
+            <img src="images/product-screen/career-main-2.png" />
           </div>
         </article>
       </section>
 
       <section id="recruit-section">
         <aritcle class="description">
-          <h3 class="section-tit">채용&#183;온보딩</h3>
-          <h2>학습현황을 하나의<br />대시보드에서</h2>
-          <p>
+          <h3 class="section-tit scroll-trans">채용&#183;온보딩</h3>
+          <h2 class="scroll-trans">
+            엑셀정리? 더 이상 필요 없어요~<br />
+            지원자 현황은 한 번에 정리됩니다
+          </h2>
+          <p class="scroll-trans">
             코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            고객의 위험을 관리하기 위해 포괄적인 보안,<br />
             개인 정보 보호 및 규정 준수
           </p>
-          <button class="more">더알아보기</button>
+          <button class="more scroll-trans"><a href="/">더알아보기</a></button>
         </aritcle>
-        <article class="img-container">
-          <img src="images/recruit_1.png" />
+        <article class="img-container scroll-trans">
+          <img src="images/product-screen/recruit-main.png" />
         </article>
-        <article class="bg-mockup">
-          <img src="images/mockup-test.png" class="mockup-1" />
-          <img src="images/mockup-test.png" class="mockup-2" />
+        <article class="bg-mockup scroll-trans">
+          <img src="images/recruit-bg.png" />
         </article>
       </section>
 
       <section id="management-section">
         <aritcle class="description">
-          <h3 class="section-tit">인사운영</h3>
-          <h2>학습현황을 하나의<br />대시보드에서</h2>
-          <button class="more">더알아보기</button>
+          <h3 class="section-tit scroll-trans">인사운영</h3>
+          <h2 class="scroll-trans">
+            인사담당자는 HR 통합운영,<br />
+            직원들은 HR 셀프서비스
+          </h2>
+          <button class="more scroll-trans"><a href="/">더알아보기</a></button>
         </aritcle>
         <article class="img-container">
-          <div class="img-item-1">
+          <div class="img-item-1 scroll-trans">
             <p>코너스톤은 지속적인 감독 및<br />모니터링을 통해 고객의 위험을 관리</p>
-            <img src="images/career_2.png" />
+            <img src="images/product-screen/management-main-1.png" />
           </div>
-          <div class="img-item-2">
+          <div class="img-item-2 scroll-trans">
             <p>코너스톤은 지속적인 감독 및<br />모니터링을 통해 고객의 위험을 관리</p>
           </div>
-          <div class="img-item-3">
+          <div class="img-item-3 scroll-trans scroll-trans-delay-300">
             <p>코너스톤은 지속적인 감독 및 모니터링을 통해 고객의 위험을<br />관리하기 위해 포괄적인 보안, 개인 정보 보호 및 규정 준수</p>
-            <img src="images/career_1.png" />
+            <img src="images/product-screen/management-main-2.png" />
           </div>
         </article>
       </section>
 
       <section id="sub-banner">
-        <h2>
+        <h2 class="scroll-trans">
           클라우드 솔루션<br />
           코너스톤에서<br class="pc" />
           쉽고 간편하게
         </h2>
       </section>
       <section id="why-use-cornerstone">
-        <h2><span class="point-txt-color">코너스톤</span><br class="pc" />으로 전향해야 할<br />보다 많은 이유.</h2>
+        <h2 class="scroll-trans"><span class="point-txt-color">코너스톤</span><br class="pc" />으로 전향해야 할<br />보다 많은 이유.</h2>
         <article class="img-container">
-          <div class="img-item-1">
-            <i>채용.온보딩</i>
-            <p>엑셀정리? 더 이상 필요 없어요~<br />지원자 현황은 한 번에 정리됩니다</p>
-            <img src="images/use-corner-1.png" />
+          <div class="img-item-1 scroll-trans">
+            <i>교육</i>
+            <p>
+              개인이 자유롭게 구성하는<br />
+              플레이리스트
+            </p>
+            <img src="images/product-screen/why-use-main-1.png" />
           </div>
-          <div class="img-item-2">
-            <i>채용.온보딩</i>
-            <p>엑셀정리? 더 이상 필요 없어요~<br />지원자 현황은 한 번에 정리됩니다</p>
-            <img src="images/use-corner-1.png" />
+          <div class="img-item-2 scroll-trans scroll-trans-delay-300">
+            <i>교육</i>
+            <p>뱃지와 포인트 모으는 재미</p>
+            <img src="images/product-screen/why-use-main-2.png" />
           </div>
-          <div class="img-item-3">
-            <i>채용.온보딩</i>
-            <p>엑셀정리? 더 이상 필요 없어요~<br />지원자 현황은 한 번에 정리됩니다</p>
-            <img src="images/use-corner-1.png" />
+          <div class="img-item-3 scroll-trans">
+            <i>성과&#183;커리어</i>
+            <p>
+              관리자에서 코치로:<br />
+              조직 내 구성원과의 상시 피드백
+            </p>
+            <img src="images/product-screen/why-use-main-3.png" />
           </div>
-          <div class="img-item-4">
-            <i>채용.온보딩</i>
-            <p>엑셀정리? 더 이상 필요 없어요~<br />지원자 현황은 한 번에 정리됩니다</p>
-            <img src="images/use-corner-1.png" />
+          <div class="img-item-4 scroll-trans">
+            <i>성과&#183;커리어</i>
+            <p>
+              예산 안에서 합리적으로<br />
+              정하는 보상
+            </p>
+            <img src="images/product-screen/why-use-main-4.png" />
           </div>
-          <div class="img-item-5">
-            <i>채용.온보딩</i>
-            <p>엑셀정리? 더 이상 필요 없어요~<br />지원자 현황은 한 번에 정리됩니다</p>
-            <img src="images/use-corner-1.png" />
+          <div class="img-item-5 scroll-trans scroll-trans-delay-300">
+            <i>채용&#183;온보딩</i>
+            <p>
+              직원의 모든 정보는<br />
+              한 페이지에서 관리하세요
+            </p>
+            <img src="images/product-screen/why-use-main-5.png" />
           </div>
         </article>
       </section>
@@ -275,33 +340,108 @@
       </footer>
     </div>
     <script>
+      const body = document.querySelector("body");
+      const wrapper = document.querySelector("#wrapper");
+
       let swiper = undefined;
       const resizeFunc = () => {
+        console.log(1);
         const windowWt = window.innerWidth;
         if (windowWt > 768 && swiper == undefined) {
           swiper = new Swiper("#slide-section", {
             direction: "vertical",
-            mousewheel: {
-              releaseOnEdges: true,
-            },
+            // mousewheel: {
+            //   releaseOnEdges: true,
+            // },
             effect: "fade",
           });
+          // swiper.mousewheel.enabled = true;
+
           swiper.on("reachEnd", () => {
             console.log("last");
+            wrapper.style.height = "auto";
+            wrapper.style.overflow = "none";
+          });
+          window.addEventListener("scroll", () => {
+            const scr = window.scrollY;
+            const slideTop = document.querySelector("#slide-section").offsetTop;
+            const slideHt = document.querySelector("#slide-section").offsetHeight;
+            if (scr > slideTop - 91 && scr < slideTop - 71) {
+              // swiper.mousewheel.enable();
+            } else {
+              // swiper.mousewheel.disable();
+            }
           });
         } else if (windowWt <= 768 && swiper != undefined) {
-          console.log(swiper);
           swiper.destroy();
           swiper = undefined;
         }
+        console.log(swiper);
+
+        if (windowWt > 768) {
+          // const mainSection = document.querySelector("#main-section").offsetHeight;
+          // const slideSection = document.querySelector("#slide-section").offsetHeight;
+          // wrapper.style.height = `${mainSection + slideSection}px`;
+          // wrapper.style.overflow = "hidden";
+        }
       };
+
       resizeFunc();
 
       window.addEventListener("resize", resizeFunc);
 
       window.addEventListener("scroll", () => {
         const scr = window.scrollY;
-        const slideHt = document.querySelector("#slide-section").offsetHeight;
+      });
+      const scrollTrans = document.querySelectorAll(".scroll-trans");
+      for (let i = 0; i < scrollTrans.length; i++) {
+        const clientRectY = window.pageYOffset + scrollTrans[i].getBoundingClientRect().top;
+        const windowHt = window.innerHeight - 50;
+        const resultTrans = clientRectY - windowHt;
+        window.addEventListener("scroll", () => {
+          const scr = window.scrollY;
+          if (resultTrans < scr) {
+            scrollTrans[i].classList.add("on");
+          }
+        });
+      }
+
+      //문의하기 검사
+      const inquiry = document.querySelector("#inquiry");
+      const inquiryClose = inquiry.querySelector(".close");
+      const inquiryForm = document.querySelector(".inquiry-form");
+      const dim = document.querySelector(".dim");
+      const inquiryFormInput = inquiryForm.querySelectorAll("input");
+      const InputError = inquiryForm.querySelectorAll("input.error");
+      const phoneForm = inquiryForm.querySelector(".phone-input").querySelectorAll("input");
+      inquiryForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        for (let i = 0; i < inquiryFormInput.length; i++) {
+          if (inquiryFormInput[i].value.length < 1) {
+            inquiryFormInput[i].classList.add("error");
+            inquiryForm.querySelector("select").classList.add("error");
+            inquiryForm.querySelector("textarea").classList.add("error");
+          } else {
+            inquiryFormInput[i].classList.remove("error");
+          }
+        }
+      });
+
+      //문의하기 플로팅
+      const inquiryBtn = document.querySelector("#inquiry-btn");
+
+      inquiryBtn.addEventListener("click", () => {
+        inquiry.classList.add("on");
+        dim.classList.add("on");
+        inquiryBtn.style.display = "none";
+        body.style.overflow = "hidden";
+      });
+
+      inquiryClose.addEventListener("click", () => {
+        inquiry.classList.remove("on");
+        dim.classList.remove("on");
+        inquiryBtn.style.display = "block";
+        body.style.overflow = "auto";
       });
     </script>
     <script src="js/main.js"></script>
