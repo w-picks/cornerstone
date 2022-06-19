@@ -255,6 +255,7 @@ header .logo {
 }
 header .logo img {
   height: 28px;
+  width: auto;
 }
 footer {
   background: #48494b;
