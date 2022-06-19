@@ -89,6 +89,7 @@ video {
   vertical-align: top;
   color: inherit;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+  word-break: keep-all;
 }
 /* HTML5 display-role reset for older browsers */
 article,
