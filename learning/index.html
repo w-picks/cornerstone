@@ -10,74 +10,27 @@
     <link rel="stylesheet" href="../css/detail.css" />
   </head>
   <body>
-    <header>
-      <div>
-        <h1 class="logo">
-          <a href="/">
-            <img src="../images/cornerstone-logo.png" title="cornerstone" alt="코너스톤 로고" />
-          </a>
-        </h1>
-      </div>
-    </header>
-    <button id="inquiry-btn">도입 문의하기<img src="../images/icons/inquiry-button-icon.svg" /></button>
-    <div id="inquiry">
-      <button class="close"><img src="../images/icons/inquiry-button-close.svg" /></button>
-      <h3>도입문의</h3>
-      <p>궁금하신 사항을 남겨주시면, 빠르게 연락드리겠습니다.</p>
-      <form class="inquiry-form">
-        <article>
-          <div class="name"><span>성함</span><input type="text" /></div>
-          <div class="company"><span>회사명</span><input type="text" /></div>
-          <div class="part"><span>부서명</span><input type="text" /></div>
-          <div class="position"><span>직책</span><input type="text" /></div>
-          <div class="phone">
-            <span>휴대폰</span>
-            <div class="phone-input"><input type="number" />&nbsp;-&nbsp;<input type="number" />&nbsp;-&nbsp;<input type="number" /></div>
-          </div>
-          <div class="email">
-            <span>이메일</span>
-            <div class="email-input">
-              <input type="text" />
-              &nbsp;@&nbsp;
-              <select>
-                <option>선택하세요</option>
-                <option>직접입력</option>
-                <option>naver.com</option>
-                <option>daum.net</option>
-                <option>gmail.com</option>
-                <option>hotmail.com</option>
-                <option>nate.com</option>
-                <option>korea.com</option>
-              </select>
-            </div>
-          </div>
-          <div class="solution"><span>문의솔루션</span><input type="text" /></div>
-          <div class="etc"><span>문의사항</span><textarea></textarea></div>
-        </article>
-        <button type="submit">문의보내기<img src="../images/icons/inquiry-button-icon.svg" /></button>
-      </form>
-    </div>
-    <div class="dim"></div>
+    <header></header>
+    <div class="inquiry-container"></div>
     <section id="learning-1">
       <article>
         <div class="description">
-          <h3 class="section-tit scroll-trans">교육</h3>
-          <h2 class="scroll-trans">
+          <h3 class="section-tit">교육</h3>
+          <h2 class="">
             한 눈에 보는<br />
             나의 학습 현황과<br />
             맞춤형 추천
           </h2>
-          <p class="scroll-trans">
-            코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            고객의 위험을 관리하기 위해 포괄적인 보안,<br />
-            개인 정보 보호 및 규정 준수
+          <p class="">
+            사내&#183;외 모든 교육과정을, 한 곳에서 검색하고 학습하세요.<br class="mo" />
+            나에게 맞는 과정은 테마, 학습이력, 직무를 기반으로 자동 추천됩니다.
           </p>
         </div>
         <div class="img-container">
-          <img src="../images/product-screen/learning-main.png" class="scroll-trans" />
-          <span class="tool tool-1 scroll-trans">진행중인 학습</span>
-          <span class="tool tool-2 scroll-trans">학습 이력 기반 추천 과정</span>
-          <span class="tool tool-3 scroll-trans">직무 기반 추천 과정</span>
+          <img src="../images/product-screen/learning-main.png" class="" />
+          <span class="tool tool-1">진행중인 학습</span>
+          <span class="tool tool-2">학습 이력 기반 추천 과정</span>
+          <span class="tool tool-3">직무 기반 추천 과정</span>
         </div>
       </article>
     </section>
@@ -90,9 +43,8 @@
             구성하는 플레이리스트
           </h2>
           <p class="scroll-trans">
-            코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            고객의 위험을 관리하기 위해 포괄적인 보안,<br />
-            개인 정보 보호 및 규정 준수
+            나만의 플레이리스트<small>(학습목록)</small>를 만들어 보세요.<br />
+            동료들의 플레이리스트<small>(학습목록)</small>를 팔로우 할 수도 있습니다.
           </p>
         </div>
         <div class="img-container">
@@ -109,12 +61,11 @@
       <article>
         <div class="description">
           <h3 class="section-tit scroll-trans">교육</h3>
-          <h2 class="scroll-trans">뱃지와 포인트<br class="pc" />모으는 재미</h2>
-          <p class="scroll-trans">
-            코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            고객의 위험을 관리하기 위해 포괄적인 보안,<br />
-            개인 정보 보호 및 규정 준수
-          </p>
+          <h2 class="scroll-trans">
+            뱃지와 포인트<br class="pc" />
+            모으는 재미
+          </h2>
+          <p class="scroll-trans">완료한 나의 학습결과는 뱃지와 포인트로 보여집니다. 물론 뱃지&#183;포인트를 승진/보상에 활용할 수 있습니다.</p>
         </div>
         <div class="img-container scroll-trans">
           <div>
@@ -124,85 +75,8 @@
         </div>
       </article>
     </section>
-    <footer>
-      <div class="site-map">
-        <div class="about">
-          <b>About</b>
-          <ul>
-            <li><a href="/">About us</a></li>
-            <li><a href="/">PR</a></li>
-            <li><a href="/">News & Notice</a></li>
-          </ul>
-        </div>
-        <div class="resources">
-          <b>Resources</b>
-          <ul>
-            <li><a href="/">제품소개서</a></li>
-            <li><a href="/">E-books & Whitepapers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="company-info">
-        <b>Contact</b>
-        <div class="contact">
-          <ul>
-            <li>
-              <i class="contact-tit">솔루션 문의</i>
-              <em><a href="mailto:csod@i2max.co.kr">csod@i2max.co.kr</a></em>
-            </li>
-          </ul>
-          <div class="office-info">
-            <ul class="head-office">
-              <li>
-                <i class="contact-tit">본사</i>
-              </li>
-              <li>
-                <i>TEL</i>
-                <em>02-365-2187</em>
-              </li>
-              <li>
-                <i>FAX</i>
-                <em>02-365-2093</em>
-              </li>
-              <li>
-                <i>ADDRESS</i>
-                <em
-                  >서울시 마포구 마포대로 137 KRX빌딩 7층<br />
-                  (공덕동)</em
-                >
-              </li>
-            </ul>
-            <ul class="outstation">
-              <li>
-                <i class="contact-tit">부산지사</i>
-              </li>
-              <li>
-                <i>TEL</i>
-                <em>070-7705-7375</em>
-              </li>
-              <li>
-                <i>ADDRESS</i>
-                <em>부산광역시 해운대구 센텀중앙로 97 <br />센텀스카이비즈 A동 1311호</em>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <ul class="sns">
-        <li>
-          <a href="/"><img src="../images/icons/sns-icon-1.png" /></a>
-        </li>
-        <li>
-          <a href="/"><img src="../images/icons/sns-icon-2.png" /></a>
-        </li>
-        <li>
-          <a href="/"><img src="../images/icons/sns-icon-3.png" /></a>
-        </li>
-        <li>
-          <a href="/"><img src="../images/icons/sns-icon-4.png" /></a>
-        </li>
-      </ul>
-    </footer>
+    <footer></footer>
+    <script src="../js/inc.js"></script>
     <script src="../js/common.js"></script>
   </body>
 </html>

@@ -65,7 +65,7 @@ section:not(#main-section, #slide-section, #sub-banner) {
   line-height: 1.2;
   padding-left: 26px;
   padding-top: 39px;
-  padding-right: 50px;
+  padding-right: 26px;
   box-sizing: border-box;
   border-bottom: none;
   border-radius: inherit;
@@ -278,6 +278,9 @@ footer .site-map {
   display: flex;
   margin-bottom: 89px;
 }
+footer .site-map a:hover {
+  text-decoration: underline;
+}
 footer .site-map > div {
   flex-grow: 1;
 }
@@ -347,5 +350,8 @@ footer .sns li {
   }
   footer .office-info > * {
     flex-grow: 1;
+  }
+  footer .office-info .outstation {
+    margin-top: 0;
   }
 }

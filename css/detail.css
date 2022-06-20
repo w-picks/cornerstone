@@ -33,8 +33,24 @@
   top: 85.05%;
   left: 68.77%;
 }
+.description h2 {
+  line-height: 40px;
+}
+.description p {
+  line-height: 22px;
+}
+br.pc {
+  display: block;
+}
+br.mo {
+  display: none;
+}
 img.pc {
   display: none;
+}
+small {
+  font-size: 12px;
+  color: #939393;
 }
 #learning-1 {
   background: #fbfbfb;
@@ -172,6 +188,9 @@ section#management-3 {
   }
   br.pc {
     display: none;
+  }
+  br.mo {
+    display: block;
   }
   img.pc {
     display: inline;

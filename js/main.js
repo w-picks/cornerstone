@@ -80,7 +80,7 @@ const resizeFunc = () => {
 };
 
 const slideSection = document.querySelector("#slide-section").offsetTop;
-pullSlideWrapping.style.top = `${slideSection}px`;
+pullSlideWrapping.style.top = `${slideSection + 100}px`;
 
 resizeFunc();
 
@@ -92,17 +92,12 @@ for (let i = 0; i < slide2Hrm.length; i++) {
   slide2Hrm[i].style.padding = "1% 0";
 }
 
-// setInterval(() => {
-//   num2++;
-//   console.log(num2);
-// }, 1000);
-
-// for (let i = 0; i < userValue.length; i++) {
-//   userValue[i].querySelector("b");
-//   setInterval(() => {
-//     num++;
-//     if (num <= 3600) {
-//       userValue[0].querySelector("b").innerHTML = num;
-//     }
-//   }, 100);
-// }
+const mainSlide = new Swiper(".main-slide", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  allowTouchMove: false,
+});
+// mainSlide.allowSlideNext;

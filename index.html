@@ -11,58 +11,15 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   </head>
-
+  <!-- 경로수정해야하는 부분
+  main - section 1 -> 카테고리 (상세페이지이동url)
+      - 각 section -> 더알아보기 버튼(상세페이지이동url)
+  inc.js -> img url
+ -->
   <body>
+    <header></header>
     <div id="wrapper">
-      <header>
-        <div>
-          <h1 class="logo">
-            <a href="/">
-              <img src="images/cornerstone-logo.png" title="cornerstone" alt="코너스톤 로고" />
-            </a>
-          </h1>
-        </div>
-      </header>
-      <button id="inquiry-btn">도입 문의하기<img src="images/icons/inquiry-button-icon.svg" /></button>
-      <div id="inquiry">
-        <button class="close"><img src="images/icons/inquiry-button-close.svg" /></button>
-        <h3>도입문의</h3>
-        <p>궁금하신 사항을 남겨주시면, 빠르게 연락드리겠습니다.</p>
-        <form class="inquiry-form">
-          <article>
-            <div class="name"><span>성함</span><input type="text" /></div>
-            <div class="company"><span>회사명</span><input type="text" /></div>
-            <div class="part"><span>부서명</span><input type="text" /></div>
-            <div class="position"><span>직책</span><input type="text" /></div>
-            <div class="phone">
-              <span>휴대폰</span>
-              <div class="phone-input"><input type="number" />&nbsp;-&nbsp;<input type="number" />&nbsp;-&nbsp;<input type="number" /></div>
-            </div>
-            <div class="email">
-              <span>이메일</span>
-              <div class="email-input">
-                <input type="text" />
-                &nbsp;@&nbsp;
-                <select>
-                  <option>선택하세요</option>
-                  <option>직접입력</option>
-                  <option>naver.com</option>
-                  <option>daum.net</option>
-                  <option>gmail.com</option>
-                  <option>hotmail.com</option>
-                  <option>nate.com</option>
-                  <option>korea.com</option>
-                </select>
-              </div>
-            </div>
-            <div class="solution"><span>문의솔루션</span><input type="text" /></div>
-            <div class="etc"><span>문의사항</span><textarea></textarea></div>
-          </article>
-          <button type="submit">문의보내기<img src="images/icons/inquiry-button-icon.svg" /></button>
-        </form>
-      </div>
-      <div class="dim"></div>
-
+      <div class="inquiry-container"></div>
       <section id="main-section">
         <h2>
           클라우드 솔루션<br /><span class="point-txt-color">코너스톤</span>에서<br class="pc" />
@@ -75,7 +32,22 @@
             <li><a href="https://w-picks.github.io/cornerstone/recruit">채용&#183;온보딩</a></li>
             <li><a href="https://w-picks.github.io/cornerstone/management">인사운영</a></li>
           </ul>
-          <img src="images/product-screen/main-1.png" />
+          <div class="main-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/product-screen/main-slide-1.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-screen/main-slide-2.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-screen/main-slide-3.png" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/product-screen/main-slide-4.png" />
+              </div>
+            </div>
+          </div>
         </article>
       </section>
 
@@ -347,9 +319,8 @@
             맞춤형 추천
           </h2>
           <p class="scroll-trans">
-            코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            고객의 위험을 관리하기 위해 포괄적인 보안,<br />
-            개인 정보 보호 및 규정 준수
+            사내&#183;외 모든 교육과정을, 한 곳에서 검색하고 학습하세요.<br class="mo" />
+            나에게 맞는 과정은 테마, 학습이력, <br class="pc" />직무를 기반으로 자동 추천됩니다.
           </p>
           <button class="more scroll-trans"><a href="https://w-picks.github.io/cornerstone/learning">더알아보기</a></button>
         </aritcle>
@@ -372,11 +343,11 @@
         </aritcle>
         <article class="img-container">
           <div class="img-item-1 scroll-trans">
-            <p>코너스톤은 지속적인 감독 및 모니터링을 통해 고객의 위험을 관리하기 위해 포괄적인 보안, 개인 정보 보호 및 규정 준수</p>
+            <p>목표 얼라인이 말 뿐인 경우가 많습니다. 코너스톤의 목표는 상위조직과 연계하여 수립하고, 진척도를 한 번에 확인합니다.</p>
             <img src="images/product-screen/career-main-1.png" />
           </div>
           <div class="img-item-2 scroll-trans scroll-trans-delay-300">
-            <p>코너스톤은 지속적인 감독 및 모니터링을 통해 고객의 위험을 관리</p>
+            <p>평가 프로세스를 자유롭게 구성합니다.</p>
             <img src="images/product-screen/career-main-2.png" />
           </div>
         </article>
@@ -392,8 +363,8 @@
             정리됩니다
           </h2>
           <p class="scroll-trans">
-            코너스톤은 지속적인 감독 및 모니터링을 통해<br />
-            개인 정보 보호 및 규정 준수
+            우리 회사의 모든 지원자 정보는 한 곳으로 모입니다.<br />서류접수부터 최종 오퍼레터 발송까지~<br />
+            편리하고 손쉽게 하세요.
           </p>
           <button class="more scroll-trans"><a href="https://w-picks.github.io/cornerstone/recruit">더알아보기</a></button>
         </aritcle>
@@ -415,18 +386,22 @@
             직원들은<br class="pc" />
             HR 셀프서비스
           </h2>
+          <p class="scroll-trans">
+            각종 서류 발급으로 낭비하던 시간이 줄어듭니다.<br />직원 개개인이 셀프로 이용하게 됩니다.<br />
+            인사 팀원들은 본연의 업무에 집중하세요~
+          </p>
           <button class="more scroll-trans"><a href="https://w-picks.github.io/cornerstone/management">더알아보기</a></button>
         </aritcle>
         <article class="img-container">
           <div class="img-item-1 scroll-trans">
-            <p>코너스톤은 지속적인 감독 및<br />모니터링을 통해 고객의 위험을 관리</p>
+            <p>입사 때 부터의 모든 기본정보, 이력정보 및 각종 이동/ 발령 정보를 한 곳에서 확인하세요.</p>
             <img src="images/product-screen/management-main-1.png" />
           </div>
           <div class="img-item-2 scroll-trans">
-            <p>코너스톤은 지속적인 감독 및<br />모니터링을 통해 고객의 위험을 관리</p>
+            <p>직원의 모든 정보는<br />한 페이지에서 관리하세요</p>
           </div>
           <div class="img-item-3 scroll-trans scroll-trans-delay-300">
-            <p>코너스톤은 지속적인 감독 및 모니터링을 통해 고객의 위험을<br />관리하기 위해 포괄적인 보안, 개인 정보 보호 및 규정 준수</p>
+            <p>각종 서류 발급으로 낭비하던 시간이 줄어듭니다. 인사팀원들은 본연의 업무에 집중하세요~</p>
             <img src="images/product-screen/management-main-2.png" />
           </div>
         </article>
@@ -487,86 +462,9 @@
         </article>
       </section>
 
-      <footer>
-        <div class="site-map">
-          <div class="about">
-            <b>About</b>
-            <ul>
-              <li><a href="/">About us</a></li>
-              <li><a href="/">PR</a></li>
-              <li><a href="/">News & Notice</a></li>
-            </ul>
-          </div>
-          <div class="resources">
-            <b>Resources</b>
-            <ul>
-              <li><a href="/">제품소개서</a></li>
-              <li><a href="/">E-books & Whitepapers</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="company-info">
-          <b>Contact</b>
-          <div class="contact">
-            <ul>
-              <li>
-                <i class="contact-tit">솔루션 문의</i>
-                <em><a href="mailto:csod@i2max.co.kr">csod@i2max.co.kr</a></em>
-              </li>
-            </ul>
-            <div class="office-info">
-              <ul class="head-office">
-                <li>
-                  <i class="contact-tit">본사</i>
-                </li>
-                <li>
-                  <i>TEL</i>
-                  <em>02-365-2187</em>
-                </li>
-                <li>
-                  <i>FAX</i>
-                  <em>02-365-2093</em>
-                </li>
-                <li>
-                  <i>ADDRESS</i>
-                  <em
-                    >서울시 마포구 마포대로 137 KRX빌딩 7층<br />
-                    (공덕동)</em
-                  >
-                </li>
-              </ul>
-              <ul class="outstation">
-                <li>
-                  <i class="contact-tit">부산지사</i>
-                </li>
-                <li>
-                  <i>TEL</i>
-                  <em>070-7705-7375</em>
-                </li>
-                <li>
-                  <i>ADDRESS</i>
-                  <em>부산광역시 해운대구 센텀중앙로 97 <br />센텀스카이비즈 A동 1311호</em>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <ul class="sns">
-          <li>
-            <a href="/"><img src="images/icons/sns-icon-1.png" /></a>
-          </li>
-          <li>
-            <a href="/"><img src="images/icons/sns-icon-2.png" /></a>
-          </li>
-          <li>
-            <a href="/"><img src="images/icons/sns-icon-3.png" /></a>
-          </li>
-          <li>
-            <a href="/"><img src="images/icons/sns-icon-4.png" /></a>
-          </li>
-        </ul>
-      </footer>
+      <footer></footer>
     </div>
+    <script src="js/inc.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
   </body>
