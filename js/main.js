@@ -2,6 +2,7 @@ const wrapper = document.querySelector("#wrapper");
 const pullSlideWrapping = document.querySelector(".slide-pull-wrapping");
 
 let swiper = undefined;
+let numIntervalBloo = true;
 const resizeFunc = () => {
   const windowWt = window.innerWidth;
   if (windowWt >= 1000 && swiper == undefined) {
@@ -29,8 +30,40 @@ const resizeFunc = () => {
         wrapper.style.height = `${mainSection + slideSection}px`;
         wrapper.style.overflow = "hidden";
         pullSlideWrapping.style.display = "block";
+        numIntervalBloo = true;
       } else {
         pullSlideWrapping.style.display = "none";
+        //숫자 증가
+        if (numIntervalBloo == true) {
+          let numIntervalEl = document.querySelector(".number-interval");
+          let userValue = document.querySelectorAll(".user-value li");
+          let num = 0;
+          let num2 = 0;
+          let num3 = 0;
+          let num4 = 0;
+          setInterval(() => {
+            num += 69;
+            if (num <= 4000) {
+              numIntervalEl.innerHTML = num.toLocaleString("ko-KR");
+            } else {
+              numIntervalEl.innerHTML = "4,000";
+            }
+            num2 += 60;
+            if (num2 <= 3600) {
+              userValue[0].querySelector("b").innerHTML = num2;
+            }
+            num3++;
+            if (num3 <= 40) {
+              userValue[1].querySelector("b").innerHTML = `${num3}M`;
+              userValue[3].querySelector("b").innerHTML = num3;
+            }
+            num4 += 5;
+            if (num4 <= 180) {
+              userValue[2].querySelector("b").innerHTML = num4;
+            }
+          }, 20);
+          numIntervalBloo = false;
+        }
       }
     });
   } else if (windowWt < 1000 && swiper != undefined) {
@@ -58,3 +91,18 @@ const slide2Hrm = document.querySelectorAll("#slide-section .htm-container > ul 
 for (let i = 0; i < slide2Hrm.length; i++) {
   slide2Hrm[i].style.padding = "1% 0";
 }
+
+// setInterval(() => {
+//   num2++;
+//   console.log(num2);
+// }, 1000);
+
+// for (let i = 0; i < userValue.length; i++) {
+//   userValue[i].querySelector("b");
+//   setInterval(() => {
+//     num++;
+//     if (num <= 3600) {
+//       userValue[0].querySelector("b").innerHTML = num;
+//     }
+//   }, 100);
+// }
