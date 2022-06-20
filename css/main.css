@@ -721,7 +721,7 @@ section#recruit-section {
   .slide-pull-wrapping {
     position: absolute;
     top: 0;
-    left: 0;r
+    left: 0;
     width: 100%;
     height: calc(100vh - 100px);
     z-index: 2;
@@ -802,6 +802,7 @@ section#recruit-section {
     overflow: hidden;
     position: relative;
     z-index: 1;
+    display: block;
   }
   #main-section .main-slide .swiper-wrapper {
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
