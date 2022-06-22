@@ -10,15 +10,6 @@ br.mo {
   position: relative;
   z-index: 1;
   margin-bottom: 51px;
-  animation: gradientAni 3s infinite linear;
-}
-@keyframes gradientAni {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
 }
 #main-section::after {
   content: "";
@@ -72,7 +63,7 @@ br.mo {
 #main-section .main-category li a {
   display: block;
   color: #393939;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   padding-top: 62px;
   padding-bottom: 11px;
@@ -129,9 +120,8 @@ br.mo {
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
+  margin: auto;
   margin-top: 62px;
-  margin-left: auto;
-  margin-right: max(0%, 5%);
 }
 #slide-section .swiper-slide-1 article .user-value li {
   font-size: 12px;
@@ -194,18 +184,14 @@ br.mo {
   border: 1px solid #99e1e2;
   box-shadow: 0px 4px 20px rgba(219, 244, 247, 0.6);
   border-radius: 16px;
-  flex: 1 1 40%;
   text-align: center;
-  padding-top: 13px;
-  padding-bottom: 25px;
   box-sizing: border-box;
   margin-top: 13px;
-}
-#slide-section .htm-container > ul .hrm-list:nth-child(odd) {
-  margin-right: 9px;
-}
-#slide-section .htm-container > ul .hrm-list:nth-child(even) {
-  margin-left: 9px;
+  flex-basis: calc(50% - 9px);
+  height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #slide-section .htm-container > ul .hrm-list .tit {
   font-size: 15px;
@@ -233,36 +219,6 @@ br.mo {
 }
 #slide-section .htm-container > ul .hrm-list-7 .tit {
   background-image: url(../images/icons/hrm-icon-7.png);
-}
-#slide-section .htm-container > ul .hrm-list ul {
-  font-size: 13px;
-  margin-top: 17px;
-}
-#slide-section .htm-container > ul .hrm-list ul li {
-  margin-top: 8px;
-}
-#slide-section .htm-container > ul .hrm-list-7 {
-  width: 100%;
-  padding-top: 15px;
-}
-#slide-section .htm-container > ul .hrm-list-7 .tit {
-  text-align: left;
-  background-position: left 0 top 0;
-  background-size: auto 23px;
-  padding-top: 0;
-  padding-left: 26px;
-  margin-left: 21px;
-  line-height: 23px;
-}
-#slide-section .htm-container > ul .hrm-list-7 ul {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 29px;
-  box-sizing: border-box;
-  margin-top: 16px;
-}
-#slide-section .htm-container > ul .hrm-list-7 ul li {
-  margin-right: 8px;
 }
 #slide-section .advantage {
   background: #f1f1f1;
@@ -321,7 +277,7 @@ br.mo {
   margin-top: 42px;
 }
 #slide-section .hr-system img {
-  width: auto;
+  width: 337px;
 }
 #slide-section .hr-system ul {
   margin-top: 23px;
@@ -702,36 +658,11 @@ section#recruit-section {
     opacity: 1;
     transform: translateY(0px);
   }
-  #slide-section {
-    position: relative;
-  }
-  #slide-section {
-    height: calc(100vh - 81px);
-  }
-  #slide-section .swiper-slide-1 article .user-value {
-    width: 386px;
-    height: 368px;
-    margin-top: 42px;
-  }
-  #slide-section .swiper-slide-1 article .user-value li {
-    width: 170px;
-    height: 170px;
-    background-position: top 48px right 42px;
-  }
-  .slide-pull-wrapping {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 100px);
-    z-index: 2;
-    background: transparent;
-  }
   br.pc {
     display: none;
   }
   .description h3.section-tit {
-    font-size: 16px;
+    font-size: 18px;
     background-size: auto 19px;
     height: 19px;
     line-height: 19px;
@@ -774,46 +705,19 @@ section#recruit-section {
     bottom: 58px;
   }
   #main-section {
-    padding-top: 237px;
+    padding-top: 187px;
     margin-bottom: 0;
     z-index: 2;
   }
   #main-section h2 {
     font-size: 45px;
   }
-  #main-section article {
-    display: flex;
-    flex-direction: column;
-    margin-top: -49px;
-    align-items: center;
-  }
-  /* #main-section article > img {
-    max-width: 930px;
-    margin-top: 128px;
-    display: inline;
-  } */
 
-  #main-section .main-slide {
-    width: 930px;
-    margin-top: 128px;
-    transform: translateY(103px);
-    border: 11px solid #616161;
-    border-radius: 44px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    display: block;
-  }
-  #main-section .main-slide .swiper-wrapper {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  }
-  #main-section .main-slide .swiper-slide {
-    height: max-content;
-  }
-  #main-section .main-slide .swiper-slide img {
+  #main-section article {
+    margin-top: 54px;
+    margin-bottom: 146px;
   }
   #main-section .main-category {
-    transform: translateY(103px);
     flex-wrap: nowrap;
     border-radius: 100px;
     height: 142px;
@@ -852,15 +756,31 @@ section#recruit-section {
     padding-bottom: 0;
   }
   #slide-section {
-    height: calc(100vh - 80px);
+    position: relative;
+    height: 743px;
+  }
+  #slide-section .swiper-wrapper {
+    display: flex;
   }
   #slide-section .swiper-slide {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 103px;
     box-sizing: border-box;
+  }
+  #slide-section .swiper-pagination {
+    bottom: 47px;
+  }
+  #slide-section .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 8px;
+    width: 10px;
+    height: 10px;
+    background: #d3d3d3;
+    opacity: 1;
+  }
+  #slide-section .swiper-pagination .swiper-pagination-bullet-active {
+    background: #1acaa4;
   }
   #slide-section .swiper-slide-1 article {
     display: flex;
@@ -912,37 +832,24 @@ section#recruit-section {
     display: none;
   }
   #slide-section .htm-container ul {
-    width: 1039px;
-    display: block;
+    width: 1031px;
+    justify-content: flex-start;
+    margin-left: 10px;
   }
   #slide-section .htm-container > ul .hrm-list {
     margin-left: 0 !important;
     margin-top: 12px;
     display: flex;
     padding: 19px 0;
+    flex-basis: calc(25% - 20px);
+    margin-right: 20px;
   }
   #slide-section .htm-container > ul .hrm-list .tit {
-    padding-left: 100px;
-    background-position: center left 68px;
+    padding-left: 30px;
+    background-position: center left 0px;
     line-height: 31px;
     background-size: auto 31px;
     padding-top: 0;
-    margin-right: 34px;
-  }
-  #slide-section .htm-container > ul .hrm-list ul {
-    display: flex;
-    margin-top: 0;
-  }
-  #slide-section .htm-container > ul .hrm-list ul li {
-    margin-right: 12px;
-    margin-top: 0;
-    line-height: 31px;
-  }
-  #slide-section .htm-container > ul .hrm-list-7 .tit {
-    margin-left: 0;
-  }
-  #slide-section .htm-container > ul .hrm-list-7 ul {
-    padding: 0;
   }
   #slide-section .advantage article {
     display: flex;
@@ -1115,7 +1022,7 @@ section#recruit-section {
     height: 660px;
   }
   #career-section .img-container .img-item-1 p {
-    padding: 63px 133px 75px 49px;
+    padding: 63px 49px 75px 49px;
     border-bottom: none;
   }
   #career-section .img-container .img-item-2 {
@@ -1272,12 +1179,12 @@ section#recruit-section {
     width: auto;
   }
   #why-use-cornerstone .img-container > div i {
-    font-size: 16px;
+    font-size: 19px;
     max-width: none;
     padding-left: 52px;
   }
   #why-use-cornerstone .img-container > div p {
-    font-size: 22px;
+    font-size: 24px;
     max-width: none;
     margin-top: 21px;
     margin-bottom: 53px;

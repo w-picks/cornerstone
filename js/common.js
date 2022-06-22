@@ -52,3 +52,33 @@ inquiryClose.addEventListener("click", () => {
   inquiryBtn.style.display = "block";
   body.style.overflow = "auto";
 });
+
+//aside 섹션이동
+const quickLi = quickMenu.querySelectorAll("div");
+quickLi.forEach((item, ind) => {
+  item.addEventListener("click", () => {
+    for (let i = 0; i < quickLi.length; i++) {
+      quickLi[i].classList.remove("active");
+    }
+    item.classList.add("active");
+    const mainSection = document.querySelectorAll("section")[ind + 2];
+    const clientRect = mainSection.getBoundingClientRect();
+    const offTop = clientRect.top;
+    const windowScrY = window.pageYOffset;
+    const resultTop = windowScrY + offTop;
+    console.log(resultTop);
+    scrollTo({ top: resultTop - 81, behavior: "smooth" });
+  });
+});
+
+//도입문의 직접입력
+// const directOption = document.querySelector(".inquiry-form");
+const emailInput = document.querySelector(".email-input select");
+const directInput = document.querySelector(".email-input .direct-input");
+directInput.style.display = "none";
+const directChange = (e) => {
+  if (emailInput.options[emailInput.selectedIndex].value == "direct-input") {
+    emailInput.style.display = "none";
+    directInput.style.display = "block";
+  }
+};

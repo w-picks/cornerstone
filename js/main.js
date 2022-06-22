@@ -1,38 +1,27 @@
 const wrapper = document.querySelector("#wrapper");
 const pullSlideWrapping = document.querySelector(".slide-pull-wrapping");
+const slideSection = document.querySelector("#slide-section");
 
-let swiper = undefined;
 let numIntervalBloo = true;
+let swiper = undefined;
 const resizeFunc = () => {
   const windowWt = window.innerWidth;
   if (windowWt >= 1000 && swiper == undefined) {
+    const slideTop = document.querySelector("#slide-section").offsetTop;
     swiper = new Swiper("#slide-section", {
-      direction: "vertical",
-      mousewheel: {
-        releaseOnEdges: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
       },
-      effect: "fade",
     });
-    swiper.on("reachEnd", () => {
-      wrapper.style.overflow = "auto";
-      wrapper.style.height = "auto";
-    });
+    console.log(swiper);
+
     window.addEventListener("scroll", () => {
       const scr = window.scrollY;
-      let slideTop = document.querySelector("#slide-section").offsetTop;
-      const slideHt = document.querySelector("#slide-section").offsetHeight;
-      if (scr > slideTop + slideHt) {
-        swiper.slideTo(0, 0, true);
-      }
       if (scr < slideTop - 80) {
-        const mainSection = document.querySelector("#main-section").offsetHeight;
-        const slideSection = document.querySelector("#slide-section").offsetHeight;
-        wrapper.style.height = `${mainSection + slideSection}px`;
-        wrapper.style.overflow = "hidden";
-        pullSlideWrapping.style.display = "block";
         numIntervalBloo = true;
       } else {
-        pullSlideWrapping.style.display = "none";
         //숫자 증가
         if (numIntervalBloo == true) {
           let numIntervalEl = document.querySelector(".number-interval");
@@ -69,35 +58,43 @@ const resizeFunc = () => {
   } else if (windowWt < 1000 && swiper != undefined) {
     swiper.destroy();
     swiper = undefined;
-  }
-
-  if (windowWt >= 1000) {
-    const mainSection = document.querySelector("#main-section").offsetHeight;
-    const slideSection = document.querySelector("#slide-section").offsetHeight;
-    wrapper.style.height = `${mainSection + slideSection}px`;
-    wrapper.style.overflow = "hidden";
+    console.log(swiper);
   }
 };
-
-const slideSection = document.querySelector("#slide-section").offsetTop;
-pullSlideWrapping.style.top = `${slideSection + 100}px`;
 
 resizeFunc();
 
 window.addEventListener("resize", resizeFunc);
 
-//slide - 2 노트북 높이 맞춤
-const slide2Hrm = document.querySelectorAll("#slide-section .htm-container > ul .hrm-list");
-for (let i = 0; i < slide2Hrm.length; i++) {
-  slide2Hrm[i].style.padding = "1% 0";
-}
+const mainSection = document.querySelectorAll("section");
 
-const mainSlide = new Swiper(".main-slide", {
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  loop: true,
-  allowTouchMove: false,
+window.addEventListener("scroll", () => {
+  const scr = window.scrollY;
+  const clientRect = mainSection[2].getBoundingClientRect();
+  const offTop = clientRect.top;
+  const resultTop = scr + offTop;
+  const clientRectMax = mainSection[6].getBoundingClientRect();
+  const offTopMax = clientRectMax.top;
+  const resultTopMax = scr + offTopMax;
+  if (scr > resultTop && scr < resultTopMax) {
+    for (let i = 0; i < quickLi.length; i++) {
+      const clientRect1 = mainSection[i + 3].getBoundingClientRect();
+      const offTop1 = clientRect1.top;
+      const resultTop1 = scr + offTop1;
+
+      const clientRect2 = mainSection[i + 4].getBoundingClientRect();
+      const offTop2 = clientRect2.top;
+      const resultTop2 = scr + offTop2;
+
+      if (resultTop1 < scr && scr < resultTop2) {
+        for (let i = 0; i < quickLi.length; i++) {
+          quickLi[i].classList.remove("active");
+        }
+        quickLi[i + 1].classList.add("active");
+      }
+    }
+  } else if (scr < resultTop) {
+    quickLi[1].classList.remove("active");
+    quickLi[0].classList.add("active");
+  }
 });
-// mainSlide.allowSlideNext;

@@ -216,9 +216,9 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
               <div class="email-input">
                 <input type="text" />
                 &nbsp;@&nbsp;
-                <select>
+                <select onChange="directChange()">
                   <option>선택하세요</option>
-                  <option>직접입력</option>
+                  <option value="direct-input">직접입력</option>
                   <option>naver.com</option>
                   <option>daum.net</option>
                   <option>gmail.com</option>
@@ -226,6 +226,7 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
                   <option>nate.com</option>
                   <option>korea.com</option>
                 </select>
+                <input type="text" class="direct-input">
               </div>
             </div>
             <div class="solution"><span>문의솔루션</span><input type="text" /></div>
@@ -268,6 +269,7 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
                     <option>nate.com</option>
                     <option>korea.com</option>
                   </select>
+                  <input type="text" class="direct-input">
                 </div>
               </div>
               <div class="solution"><span>문의솔루션</span><input type="text" /></div>
@@ -279,3 +281,11 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
         <div class="dim"></div>
         `;
 }
+
+const quickMenu = document.querySelector("aside#quick-menu");
+quickMenu.innerHTML += `
+<div class="active"><span></span>교육</div>
+<div><span></span>성과&#183;커리어</div>
+<div><span></span>채용&#183;온보딩</div>
+<div><span></span>인사운영</div>
+`;
