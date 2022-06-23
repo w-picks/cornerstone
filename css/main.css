@@ -392,14 +392,35 @@ br.mo {
   flex: 1 1 40%;
 }
 #slide-section .it-infra .security ul li .img {
-  height: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 7px;
+  height: 56px;
 }
-#slide-section .it-infra .security ul li .img img {
-  width: auto;
+#slide-section .it-infra .security ul li:nth-of-type(1) img {
+  width: 42px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(2) img {
+  width: 58px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(3) img {
+  width: 55px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(4) img {
+  width: 52px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(5) img {
+  width: 54px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(6) img {
+  width: 54px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(7) img {
+  width: 84px;
+}
+#slide-section .it-infra .security ul li:nth-of-type(8) img {
+  width: 45px;
 }
 
 /* 학습 */
@@ -695,6 +716,9 @@ section#recruit-section {
   }
   .img-container > div {
     border-radius: 56px;
+  }
+  section:not(#slide-section, #main-section, #sub-banner) {
+    padding-left: max(calc(50% - 570px), 170px) !important;
   }
   #inquiry-btn {
     bottom: 58px;
@@ -1028,15 +1052,16 @@ section#recruit-section {
   #career-section .img-container .img-item-2 {
     flex-grow: 1;
     height: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
   }
   #career-section .img-container .img-item-2 p {
     padding: 63px 52px 168px 52px;
     width: 100%;
     box-sizing: border-box;
     max-width: none;
-  }
-  #career-section .img-container .img-item-2 img {
-    width: 410px;
   }
   section#recruit-section {
     padding: 143px calc(50% - 570px);
@@ -1066,6 +1091,7 @@ section#recruit-section {
   }
   #recruit-section .bg-mockup img.pc {
     display: block;
+    width: 443px;
   }
   section#management-section {
     padding: 164px calc(50% - 570px);
@@ -1094,7 +1120,7 @@ section#recruit-section {
     max-width: none;
   }
   #management-section .img-container .img-item-1 img {
-    width: auto;
+    width: 290px;
   }
   #management-section .img-container .img-item-2 {
     order: 3;
@@ -1120,6 +1146,10 @@ section#recruit-section {
   #management-section .img-container .img-item-3 p {
     padding: 63px 50px 60px 50px;
     max-width: none;
+  }
+  #management-section .img-container .img-item-3 img {
+    width: calc(100% + 3px);
+    margin-left: -2px;
   }
   #sub-banner {
     padding: 0;
@@ -1178,6 +1208,7 @@ section#recruit-section {
   #why-use-cornerstone .img-container > div img {
     width: auto;
   }
+
   #why-use-cornerstone .img-container > div i {
     font-size: 19px;
     max-width: none;
@@ -1203,18 +1234,22 @@ section#recruit-section {
   #why-use-cornerstone .img-container > div.img-item-5 p {
     margin-bottom: 28px;
   }
+  #why-use-cornerstone .img-container > div.img-item-1 img {
+    width: 489px;
+  }
+  #why-use-cornerstone .img-container > div.img-item-2 img {
+    width: 529px;
+  }
   #why-use-cornerstone .img-container > div.img-item-5 img {
     margin-left: 10px;
-  }
-  #why-use-cornerstone .img-container > div.img-item-3 img {
-    width: 95%;
-    margin: auto;
+    width: 541px;
   }
   #why-use-cornerstone .img-container > div.img-item-4 img {
     width: 57%;
   }
-  #why-use-cornerstone .img-container > div.img-item-5 img {
-    width: auto;
+  #why-use-cornerstone .img-container > div.img-item-3 img {
+    width: 95%;
+    margin: auto;
   }
   #why-use-cornerstone .img-item-3 img.pc {
     display: block;

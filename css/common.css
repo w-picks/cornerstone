@@ -230,6 +230,37 @@ section:not(#main-section, #slide-section, #sub-banner) {
 #inquiry .inquiry-form button[type="submit"] img {
   width: 15px;
 }
+.inquiry-succes {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 362px;
+  padding-top: 30px;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  z-index: 9999;
+  display: none;
+}
+.inquiry-succes img {
+  width: 58px;
+}
+.inquiry-succes p {
+  font-size: 14px;
+  color: #393939;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.inquiry-succes button {
+  padding: 17px;
+  color: #1acaa4;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 header {
   height: 81px;
@@ -250,12 +281,21 @@ header > div {
   width: 100%;
   margin: auto;
   align-items: center;
+  justify-content: space-between;
 }
 header .logo {
 }
 header .logo img {
   height: 28px;
   width: auto;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #393939;
+  width: 333px;
 }
 footer {
   background: #48494b;
@@ -328,6 +368,7 @@ footer .sns li {
   margin-bottom: 0;
 }
 #quick-menu {
+  display: none;
   width: 115px;
   height: 166px;
   /* border: 1px solid #99e1e2; */
@@ -337,19 +378,19 @@ footer .sns li {
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 9999;
+  z-index: 9997;
   padding: 12px 0;
   box-sizing: border-box;
 }
 #quick-menu div {
   height: 25%;
-  display: flex;
-  align-items: center;
   font-size: 13px;
   color: #bdbdbd;
   font-weight: 500;
   padding-left: 16px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 #quick-menu div span {
@@ -382,11 +423,11 @@ footer .sns li {
   border-radius: 50%;
 }
 @media (min-width: 1000px) {
-  section:not(#slide-section, #main-section) {
-    padding-left: 170px !important;
-  }
   #slide-section .swiper-slide-1 {
-    padding-left: 150px !important;
+    padding-left: max(calc(50% - 570px), 150px) !important;
+  }
+  #quick-menu {
+    display: block;
   }
   footer {
     display: flex;

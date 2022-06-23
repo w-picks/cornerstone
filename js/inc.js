@@ -14,6 +14,14 @@ if (header && !learningUrl && !careerUrl && !recruitUrl && !manageUrl) {
         <img src="images/cornerstone-logo.png" title="cornerstone" alt="코너스톤 로고" />
       </a>
     </h1>
+    <nav>
+      <ul>
+        <li><a href="/learning">교육</a></li>
+        <li><a href="/career">성과&#183;커리어</a></li>
+        <li><a href="/recruit">채용&#183;온보딩</a></li>
+        <li><a href="/management">인사운영</a></li>
+      </ul>
+    </nav>
   </div>
 
 `;
@@ -25,6 +33,14 @@ if (header && !learningUrl && !careerUrl && !recruitUrl && !manageUrl) {
           <img src="../images/cornerstone-logo.png" title="cornerstone" alt="코너스톤 로고" />
         </a>
       </h1>
+      <nav>
+        <ul>
+          <li><a href="/learning">교육</a></li>
+          <li><a href="/career">성과&#183;커리어</a></li>
+          <li><a href="/recruit">채용&#183;온보딩</a></li>
+          <li><a href="/management">인사운영</a></li>
+        </ul>
+      </nav>
     </div>
   
   `;
@@ -203,7 +219,7 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
         <p>궁금하신 사항을 남겨주시면, 빠르게 연락드리겠습니다.</p>
         <form class="inquiry-form">
           <article>
-            <div class="name"><span>성함</span><input type="text" /></div>
+            <div class="name"><span>성함</span><input type="text"/></div>
             <div class="company"><span>회사명</span><input type="text" /></div>
             <div class="part"><span>부서명</span><input type="text" /></div>
             <div class="position"><span>직책</span><input type="text" /></div>
@@ -214,10 +230,10 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
             <div class="email">
               <span>이메일</span>
               <div class="email-input">
-                <input type="text" />
+                <input type="text"/>
                 &nbsp;@&nbsp;
                 <select onChange="directChange()">
-                  <option>선택하세요</option>
+                  <option value="empty">선택하세요</option>
                   <option value="direct-input">직접입력</option>
                   <option>naver.com</option>
                   <option>daum.net</option>
@@ -229,13 +245,17 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
                 <input type="text" class="direct-input">
               </div>
             </div>
-            <div class="solution"><span>문의솔루션</span><input type="text" /></div>
             <div class="etc"><span>문의사항</span><textarea></textarea></div>
           </article>
           <button type="submit">문의보내기<img src="images/icons/inquiry-button-icon.svg" /></button>
         </form>
       </div>
       <div class="dim"></div>
+      <div class="inquiry-succes">
+        <img src="images/icons/inquiry-succes-icon.png">
+        <p>문의를 성공적으로 보냈습니다.</p>
+        <button>확인</button>
+      </div>
       `;
 } else {
   inquiryContainer.innerHTML += `
@@ -259,9 +279,9 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
                 <div class="email-input">
                   <input type="text" />
                   &nbsp;@&nbsp;
-                  <select>
-                    <option>선택하세요</option>
-                    <option>직접입력</option>
+                  <select onChange="directChange()">
+                    <option value="empty">선택하세요</option>
+                    <option value="direct-input">직접입력</option>
                     <option>naver.com</option>
                     <option>daum.net</option>
                     <option>gmail.com</option>
@@ -272,20 +292,26 @@ if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl)
                   <input type="text" class="direct-input">
                 </div>
               </div>
-              <div class="solution"><span>문의솔루션</span><input type="text" /></div>
               <div class="etc"><span>문의사항</span><textarea></textarea></div>
             </article>
             <button type="submit">문의보내기<img src="../images/icons/inquiry-button-icon.svg" /></button>
           </form>
         </div>
         <div class="dim"></div>
+        <div class="inquiry-succes">
+        <img src="images/icons/inquiry-succes-icon.png">
+        <p>문의를 성공적으로 보냈습니다.</p>
+        <button>확인</button>
+      </div>
         `;
 }
 
 const quickMenu = document.querySelector("aside#quick-menu");
-quickMenu.innerHTML += `
-<div class="active"><span></span>교육</div>
-<div><span></span>성과&#183;커리어</div>
-<div><span></span>채용&#183;온보딩</div>
-<div><span></span>인사운영</div>
-`;
+if (inquiryContainer && !learningUrl && !careerUrl && !recruitUrl && !manageUrl) {
+  quickMenu.innerHTML += `
+  <div class="active"><span></span>교육</div>
+  <div><span></span>성과&#183;커리어</div>
+  <div><span></span>채용&#183;온보딩</div>
+  <div><span></span>인사운영</div>
+  `;
+}

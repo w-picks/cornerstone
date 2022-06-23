@@ -86,7 +86,7 @@ window.addEventListener("scroll", () => {
       const offTop2 = clientRect2.top;
       const resultTop2 = scr + offTop2;
 
-      if (resultTop1 < scr && scr < resultTop2) {
+      if (resultTop1 - 81 < scr && scr < resultTop2 - 81) {
         for (let i = 0; i < quickLi.length; i++) {
           quickLi[i].classList.remove("active");
         }
